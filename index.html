@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SocialMediaFormatter</title>
+    <title>Post Formatter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="banner">
-            SocialMediaFormatter
-        </div>
-        <div class="buttons">
+    <!-- FormMaking: https://youtu.be/hlwlM4a5rxg -->
+    <div class='wrapper'>
+        <h1>Post Formatter</h1>
+        <h3>Your Text</h3>
+        <input name="inputtext" id="inputtext" onkeyup="updateText()" placeholder='Type Here'></input>
+        <h3>Formatted Text</h3>
+        <div id="outputtext"></div>
+    </div>
+    <!-- KeybaordMaking: https://youtu.be/x3WwmOM4f4I -->
+    <div class='keyboard'>
+        <div class="line1">
             <button id="bold" onclick="turnBold(this)">Bold</button>
             <button id="italic" onclick="turnItalic(this)">Italic</button>
             <button id="underline" onclick="turnUnderline(this)">Underline</button>
@@ -20,21 +26,20 @@
             <button id="center" class="align" onclick="turnAlign(this, 'center')" ><img src="align-center-solid.svg" alt=""></button>
             <button id="right" class="align" onclick="turnAlign(this, 'right')" ><img src="align-right-solid.svg" alt=""></button>
         </div>
-        <div class="hr"></div>
-    <div class="editors">
-        <div class="input">
-            <h3>Your Text</h3>
-            <textarea name="inputtext" id="inputtext" onkeyup="updateText()"></textarea>
+        <div class='line2'>
+            <span><button onclick="turnEmoji(id)" id='happy'>&#128512;</button></span>
+            <span><button onclick="turnEmoji(id)" id='teeth'>&#128513;</button></span>
+            <span><button onclick="turnEmoji(id)" id='mad'>&#128514;</button></span>
+            <span><button onclick="turnEmoji(id)" id='bad'>&#128515;</button></span>
+            <span><button onclick="turnEmoji(id)" id='grow'>&#128516;</button></span>
+            <span><button onclick="turnEmoji(id)" id='baffled'>&#128517;</button></span>
         </div>
-        <div class="output">
-            <h3>Formatted Text</h3>
-            <div id="outputtext"></div>
-        </div>
-        
+        <div class='line3'>
+            <button id="uppercase" onclick="turnUppercase(this)">Uppercase</button>
+            <button id="lowercase" onclick="turnLowercase(this)">Lowercase</button>
+            <button id="capitalize" onclick="turnCapitalize(this)">Capitalize</button>
+        </div
     </div>
-   
-</div>
-
 <script src="script.js"></script>
 </body>
 </html>

@@ -15,6 +15,21 @@ turnUnderline = (elem) => {
   elem.classList.toggle('active');
   document.getElementById("outputtext").classList.toggle("underlinec")
 }
+turnLowercase = (elem) => {
+  elem.classList.toggle('active');
+  document.getElementById("outputtext").classList.toggle("lowercasec")
+}
+turnUppercase = (elem) => {
+  elem.classList.toggle('active');
+  document.getElementById("outputtext").classList.toggle("uppercasec")
+}
+turnCapitalize = (elem) => {
+  elem.classList.toggle('active');
+  document.getElementById("outputtext").classList.toggle("capitalizec")
+}
+turnEmoji = (elem) => {
+  document.getElementById("outputtext").textContent += document.getElementById(elem).textContent;
+}
 turnAlign = (elem, align) => {
   document.getElementById("outputtext").style.textAlign = align;
   let btn = document.getElementsByClassName("align");
